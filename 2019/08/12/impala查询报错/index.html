@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="1.mac安装elasticsearchbrew install elasticsearch brew install kibana brew install logstash2.访问elasticsearch:http://localhost:9200 Kibana:http://localhost:5601">
+<meta name="description" content="java.sql.SQLException: [Cloudera]ImpalaJDBCDriver Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.at com.cloudera.impala.hivecommon.api.HS2Client">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac下elasticsearch安装(elk)">
-<meta property="og:url" content="http://yoursite.com/2019/08/01/elasticsearch安装/index.html">
+<meta property="og:title" content="impala长连接查询报错">
+<meta property="og:url" content="http://yoursite.com/2019/08/12/impala查询报错/index.html">
 <meta property="og:site_name" content="左手地狱">
-<meta property="og:description" content="1.mac安装elasticsearchbrew install elasticsearch brew install kibana brew install logstash2.访问elasticsearch:http://localhost:9200 Kibana:http://localhost:5601">
+<meta property="og:description" content="java.sql.SQLException: [Cloudera]ImpalaJDBCDriver Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.at com.cloudera.impala.hivecommon.api.HS2Client">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-02T04:38:17.257Z">
+<meta property="og:updated_time" content="2019-08-12T02:48:02.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac下elasticsearch安装(elk)">
-<meta name="twitter:description" content="1.mac安装elasticsearchbrew install elasticsearch brew install kibana brew install logstash2.访问elasticsearch:http://localhost:9200 Kibana:http://localhost:5601">
+<meta name="twitter:title" content="impala长连接查询报错">
+<meta name="twitter:description" content="java.sql.SQLException: [Cloudera]ImpalaJDBCDriver Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.at com.cloudera.impala.hivecommon.api.HS2Client">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/01/elasticsearch安装/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/12/impala查询报错/">
 
 
 
 
 
-  <title>mac下elasticsearch安装(elk) | 左手地狱</title>
+  <title>impala长连接查询报错 | 左手地狱</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/elasticsearch安装/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/impala查询报错/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zuoshoudiyu">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mac下elasticsearch安装(elk)</h1>
+          <h1 class="post-title" itemprop="name headline">impala长连接查询报错</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-01T00:00:00+08:00">
-                2019-08-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-12T10:28:10+08:00">
+                2019-08-12
               </time>
             
 
@@ -299,10 +299,8 @@
       
 
       
-        <h3 id="1-mac安装elasticsearch"><a href="#1-mac安装elasticsearch" class="headerlink" title="1.mac安装elasticsearch"></a>1.mac安装elasticsearch</h3><pre><code>brew install elasticsearch
-brew install kibana
-brew install logstash</code></pre><h3 id="2-访问"><a href="#2-访问" class="headerlink" title="2.访问"></a>2.访问</h3><pre><code>elasticsearch:http://localhost:9200
-Kibana:http://localhost:5601</code></pre>
+        <p>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>……<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more<br>2019-08-12 06:35:05.828 com.baijiahulian.bi.dao.NewOrderDao:130 [ERROR] - batchUpsertCustomer {}<br>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>…..<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more</p>
+<pre><code>解决: 本程序执行的时间较长,过程中其他任务也户籍执行,因为之前程序正常执行,而到出错之间只是跑的任务增加了,因此,确认代码没有问题后,增加连接池的大小,经过测试解决了问题.</code></pre>
       
     </div>
     
@@ -326,8 +324,8 @@ Kibana:http://localhost:5601</code></pre>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/31/25-35岁,你应该做什么/" rel="next" title="25-35岁,你应该做什么">
-                <i class="fa fa-chevron-left"></i> 25-35岁,你应该做什么
+              <a href="/2019/08/06/00-关于设计模式/" rel="next" title="00-关于设计模式">
+                <i class="fa fa-chevron-left"></i> 00-关于设计模式
               </a>
             
           </div>
@@ -335,10 +333,6 @@ Kibana:http://localhost:5601</code></pre>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/02/本地代码上传github/" rel="prev" title="本地代码上传github">
-                本地代码上传github <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -390,17 +384,8 @@ Kibana:http://localhost:5601</code></pre>
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -442,22 +427,6 @@ Kibana:http://localhost:5601</code></pre>
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-mac安装elasticsearch"><span class="nav-number">1.</span> <span class="nav-text">1.mac安装elasticsearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-访问"><span class="nav-number">2.</span> <span class="nav-text">2.访问</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

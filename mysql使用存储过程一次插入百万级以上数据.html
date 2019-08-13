@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="1.mac安装elasticsearchbrew install elasticsearch brew install kibana brew install logstash2.访问elasticsearch:http://localhost:9200 Kibana:http://localhost:5601">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mac下elasticsearch安装(elk)">
-<meta property="og:url" content="http://yoursite.com/2019/08/01/elasticsearch安装/index.html">
+<meta name="description" content="1.创建测试表DROP TABLE IF EXISTS `user`; CREATE TABLE `user` ( `id` bigint(20) NOT NULL, `address` varchar(255) DEFAULT NULL, `age` int(11) NOT NULL, `create_time` datetime DEFAULT NULL, `name` varchar(255">
+<meta property="og:type" content="website">
+<meta property="og:title" content="mysql使用存储过程一次插入百万级以上数据">
+<meta property="og:url" content="http://yoursite.com/mysql使用存储过程一次插入百万级以上数据.html">
 <meta property="og:site_name" content="左手地狱">
-<meta property="og:description" content="1.mac安装elasticsearchbrew install elasticsearch brew install kibana brew install logstash2.访问elasticsearch:http://localhost:9200 Kibana:http://localhost:5601">
+<meta property="og:description" content="1.创建测试表DROP TABLE IF EXISTS `user`; CREATE TABLE `user` ( `id` bigint(20) NOT NULL, `address` varchar(255) DEFAULT NULL, `age` int(11) NOT NULL, `create_time` datetime DEFAULT NULL, `name` varchar(255">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-02T04:38:17.257Z">
+<meta property="og:updated_time" content="2019-08-13T11:16:32.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac下elasticsearch安装(elk)">
-<meta name="twitter:description" content="1.mac安装elasticsearchbrew install elasticsearch brew install kibana brew install logstash2.访问elasticsearch:http://localhost:9200 Kibana:http://localhost:5601">
+<meta name="twitter:title" content="mysql使用存储过程一次插入百万级以上数据">
+<meta name="twitter:description" content="1.创建测试表DROP TABLE IF EXISTS `user`; CREATE TABLE `user` ( `id` bigint(20) NOT NULL, `address` varchar(255) DEFAULT NULL, `age` int(11) NOT NULL, `create_time` datetime DEFAULT NULL, `name` varchar(255">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/01/elasticsearch安装/">
+  <link rel="canonical" href="http://yoursite.com/mysql使用存储过程一次插入百万级以上数据.html">
 
 
 
 
 
-  <title>mac下elasticsearch安装(elk) | 左手地狱</title>
+  <title>mysql使用存储过程一次插入百万级以上数据 | 左手地狱</title>
   
 
 
@@ -220,144 +220,50 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/elasticsearch安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshoudiyu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左手地狱">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">mac下elasticsearch安装(elk)</h1>
-        
+	<h1 class="post-title" itemprop="name headline">mysql使用存储过程一次插入百万级以上数据</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-01T00:00:00+08:00">
-                2019-08-01
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <h3 id="1-mac安装elasticsearch"><a href="#1-mac安装elasticsearch" class="headerlink" title="1.mac安装elasticsearch"></a>1.mac安装elasticsearch</h3><pre><code>brew install elasticsearch
-brew install kibana
-brew install logstash</code></pre><h3 id="2-访问"><a href="#2-访问" class="headerlink" title="2.访问"></a>2.访问</h3><pre><code>elasticsearch:http://localhost:9200
-Kibana:http://localhost:5601</code></pre>
+      <div class="post-body">
+        
+        
+          <h5 id="1-创建测试表"><a href="#1-创建测试表" class="headerlink" title="1.创建测试表"></a>1.创建测试表</h5><pre><code>DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+`id` bigint(20) NOT NULL,
+`address` varchar(255) DEFAULT NULL,
+`age` int(11) NOT NULL,
+`create_time` datetime DEFAULT NULL,
+`name` varchar(255) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+SET FOREIGN_KEY_CHECKS = 1;</code></pre><h5 id="2-创建存储过程"><a href="#2-创建存储过程" class="headerlink" title="2.创建存储过程"></a>2.创建存储过程</h5><pre><code>CREATE PROCEDURE `add_user_data` ( IN n INT ) BEGIN
+DECLARE
+i INT DEFAULT 1;
+WHILE
+INSERT INTO `springboot`.`user`( `address`, `age`, `create_time`, `name`) VALUES (&apos;zhejiang&apos;, 20, &apos;2019-08-09 04:48:49&apos;, &apos;BBB&apos;);
+SET i = i + 1;
+END WHILE;
+END</code></pre><h5 id="3-调用执行插入操作"><a href="#3-调用执行插入操作" class="headerlink" title="3.调用执行插入操作"></a>3.调用执行插入操作</h5><pre><code>call add_user_data(10000000)</code></pre>
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/07/31/25-35岁,你应该做什么/" rel="next" title="25-35岁,你应该做什么">
-                <i class="fa fa-chevron-left"></i> 25-35岁,你应该做什么
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/02/本地代码上传github/" rel="prev" title="本地代码上传github">
-                本地代码上传github <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -452,7 +358,7 @@ Kibana:http://localhost:5601</code></pre>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-mac安装elasticsearch"><span class="nav-number">1.</span> <span class="nav-text">1.mac安装elasticsearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-访问"><span class="nav-number">2.</span> <span class="nav-text">2.访问</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-创建测试表"><span class="nav-number">1.</span> <span class="nav-text">1.创建测试表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-创建存储过程"><span class="nav-number">2.</span> <span class="nav-text">2.创建存储过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-调用执行插入操作"><span class="nav-number">3.</span> <span class="nav-text">3.调用执行插入操作</span></a></li></ol></div>
             
 
           </div>

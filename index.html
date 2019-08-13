@@ -229,6 +229,299 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/impala查询报错/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zuoshoudiyu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左手地狱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/impala查询报错/" itemprop="url">impala长连接查询报错</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-12T10:28:10+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>……<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more<br>2019-08-12 06:35:05.828 com.baijiahulian.bi.dao.NewOrderDao:130 [ERROR] - batchUpsertCustomer {}<br>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>…..<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more</p>
+<pre><code>解决: 本程序执行的时间较长,过程中其他任务也户籍执行,因为之前程序正常执行,而到出错之间只是跑的任务增加了,因此,确认代码没有问题后,增加连接池的大小,经过测试解决了问题.</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/06/00-关于设计模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zuoshoudiyu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左手地狱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/06/00-关于设计模式/" itemprop="url">00-关于设计模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-06T00:00:00+08:00">
+                2019-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h3><p>每天都有看不完的点,技术这条路看不到终点,只能一步步走下去,希望触摸到.<br>开始继续回顾设计模式,之前看过或者用过但是基本处于入门级,只能进行套用,很机械;<br>这次系统学习下,只有深入理解和掌握才算是将设计模式的精髓吸收.</p>
+<h3 id="2-推荐书籍"><a href="#2-推荐书籍" class="headerlink" title="2.推荐书籍"></a>2.推荐书籍</h3><pre><code>1.大话设计模式--入门书籍,.net语言,整体看下来几乎没有什么违和点,语语法上和java80%相似吧.
+2.研磨设计模式--设计模式的经典著作,特别推荐.</code></pre><h3 id="3-知识点"><a href="#3-知识点" class="headerlink" title="3.知识点"></a>3.知识点</h3><h4 id="1-分类"><a href="#1-分类" class="headerlink" title="1.分类"></a>1.分类</h4><pre><code>创建型模式:抽象了对象实例化过程,用来帮助创建对象的实例.
+结构型模式:描述如何组合类和对象以获得更大的结构.
+行为型模式:描述算法和对象间指责的分配.</code></pre><h4 id="2-学习步骤"><a href="#2-学习步骤" class="headerlink" title="2.学习步骤"></a>2.学习步骤</h4><pre><code>1:准确理解每个设计模式的功能、基本结构、标准实现,了解适合使用它的场景以及使用的效果;
+2:实际开发中,尝试使用设计模式,并反思和总结是否使用得当,是否需要做一些变化;
+3:再回头去看设计模式的理论,有了实际的模式应用经验再看设计模式,会有不同的感悟;
+4:多次重复学习设计模式的第二步和第三步.</code></pre><h4 id="3-类目"><a href="#3-类目" class="headerlink" title="3.类目"></a>3.类目</h4><pre><code>1.简单工厂
+提供一个创建对象实例的功能,而无须关心其具体的实现,被创建对象可以是接口,抽象类,也可以是具体的类.
+2.外观模式
+为子系统中的一组接口提供一个一致的界面,facade模式定义了一个高层接口,这个接口是的这一子系统跟更加容易使用.
+3.适配器模式
+将一个类的接口转换成客户希望的另一个接口,适配器模式使得原本由于接口不兼容而不能在一起工作的那些类可以一起工作.
+4.单例模式
+保证一个类只有一个实例,并提供一个访问它的全局访问点.
+5.工厂模式
+定义一个用于创建对象的接口,让子类决定实例化哪一个类,factory method使一个类的实例化延迟到其子类.
+6.抽象工厂模式
+提供一个创建一系列相关或相互依赖对象的接口,而无须指定他们具体的类.
+7.原型模式
+用原型实例指定创建对象的种类,并通过拷贝这些原型创建新的对象.
+8.生成器模式
+讲一个复杂对象的构建与它的表示分离,使得同样的构建过程可以创建新的对象.
+9.中介者模式
+用一个中介对象来封装一系列的对象交互,中介者使得各对象不需要显示地相互引用,从而使其松耦合,而且可以独立地改变他们之间的交互.
+10.代理模式
+为其他对象提供一种代理以控制对这个对象的访问.
+11.观察者模式
+定义对象间的一种一对多的依赖关系,当一个对象的状态发生改变时,所有依赖于它的对象都得到通知并被自动更新.
+12.命令模式
+将一个请求封装成一个对象,从而使你可以用不同的请求对客户进行参数化,对请求排队或记录请求日志,以及支持可撤销的操作.
+13.迭代器模式
+提供一种方法顺序访问一个聚合对象中的各个元素,而又不需暴露该对象的内部表示.
+14.组合模式
+将对象组合成树形结构以表示‘部分-整体’的层次结构,组合模式使得用户对单个对象和组合对象的使用具有一致性.
+15.模版方法模式
+定义一个操作中的算法的骨架,而将一些步骤延迟到子类中,模版方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤.
+16.策略模式
+定义一系列的算法,把他们一个个封装起来,并且使他们可相互替换,本模式使得算法可独立于使用它的客户变化.
+17.状态模式
+允许一个对象在其内部状态改变时改变它的行为,对象看起来似乎修改了它的类.
+18.备忘录模式
+在不破坏封装性的前提喜爱,捕获一个对象的内部状态,并在该对象之外保存这个状态,这样,以后就可以将该对象恢复到原先保存的状态.
+19.享元模式
+运用共享技术有效地支持大量细粒度的对象
+20.解释器模式
+给定一个语言,定义它的文法的一种表示,并定义一个解释器,这个解释器使用该表示来解释语言中的句子.
+21装饰器模式
+动态地给一个对象添加一些额外的指责,就增加功能来说,装饰模式比生成子类更为灵活.
+22.职链连模式
+使多个对象都有机会处理请求,从而避免请求的发送者和接受者之间的耦合关系,将这些对象连成一条链,并沿着这条链传递该请求,直到又一个对象处理它为止.
+23.桥接模式
+将抽象部分于它的实现部分分离,使他们都可以独立地变化.
+24.访问者模式
+表示一个作用于某对象结构中的各元素的操作,它使你可以在不改变各元素的类的前提下定义作用于这些元素的新操作.</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/微服务需要做什么/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1016,6 +1309,125 @@ Kibana:http://localhost:5601</code></pre>
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/25-35岁,你应该做什么/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zuoshoudiyu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左手地狱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/31/25-35岁,你应该做什么/" itemprop="url">25-35岁,你应该做什么</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-31T00:00:00+08:00">
+                2019-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="从今天起-每天一篇blog"><a href="#从今天起-每天一篇blog" class="headerlink" title="从今天起,每天一篇blog"></a>从今天起,每天一篇blog</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/Hexo 博客发布新文章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1089,125 +1501,6 @@ Kibana:http://localhost:5601</code></pre>
           
             <h3 id="1-创建-md文件并写入内容-保存到-posts-目录下"><a href="#1-创建-md文件并写入内容-保存到-posts-目录下" class="headerlink" title="1.创建.md文件并写入内容,保存到_posts/目录下"></a>1.创建.md文件并写入内容,保存到_posts/目录下</h3><h3 id="2-进入hexo博客目录-与-config-yml同级目录"><a href="#2-进入hexo博客目录-与-config-yml同级目录" class="headerlink" title="2.进入hexo博客目录(与_config.yml同级目录)"></a>2.进入hexo博客目录(与_config.yml同级目录)</h3><h3 id="3-执行"><a href="#3-执行" class="headerlink" title="3.执行"></a>3.执行</h3><pre><code>hexo g  
 hexo d </code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/25-35岁,你应该做什么/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshoudiyu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左手地狱">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/31/25-35岁,你应该做什么/" itemprop="url">25-35岁,你应该做什么</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-31T00:00:00+08:00">
-                2019-07-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="从今天起-每天一篇blog"><a href="#从今天起-每天一篇blog" class="headerlink" title="从今天起,每天一篇blog"></a>从今天起,每天一篇blog</h4>
           
         
       
@@ -1369,129 +1662,13 @@ hexo deploy</code></pre><p>至此,Hexo博客搭建完成!</p>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/16/关于java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshoudiyu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左手地狱">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/16/关于java/" itemprop="url">关于java</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-16T00:00:00+08:00">
-                2019-07-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>  随便写写….<br>  1.java是一门博大精深的语言,其中所包含的东西可能一生都无法完全掌握,这就好比看文,总是有好的文章等着你.<br>  2.首先你需要掌握java基础知识,注意,是掌握,是熟到做梦都会,而不是连如何重写hashCode()方法都不会.<br>  3.一时编码一时痛,一直编码一直爽.–是真的需要你坚持一下子,打通任督就轻松了.<br>  4.订阅博客,公众号,电子书等资源.–地铁时间还是别浪费.<br>  5.阅读开源框架源码.–相信我,spring会了你的春天就来了.<br>  6.了解最新技术–低头种地,抬头看天.<br>  7.写一篇文章记录下你的mind,曾经一个poi问题,第一次时写了博客,之后重复犯了4次,直到查到我写的博客.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1535,7 +1712,7 @@ hexo deploy</code></pre><p>至此,Hexo博客搭建完成!</p>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
