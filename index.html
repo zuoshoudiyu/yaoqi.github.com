@@ -229,6 +229,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/java 在数字中使用下划线/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zuoshoudiyu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左手地狱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/14/java 在数字中使用下划线/" itemprop="url">java 在数字中使用下划线</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-14T00:00:00+08:00">
+                2019-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-最近发现有人竟然不知道java中数字是可以使用下划线连接的-如下"><a href="#1-最近发现有人竟然不知道java中数字是可以使用下划线连接的-如下" class="headerlink" title="1.最近发现有人竟然不知道java中数字是可以使用下划线连接的,如下:"></a>1.最近发现有人竟然不知道java中数字是可以使用下划线连接的,如下:</h3><pre><code>@Test
+public void testNumberWithUnderline() {
+    long numUnderline = 20_000;
+    long num = 20000;
+    Assert.assertEquals(num, numUnderline);
+}</code></pre><h3 id="2-下划线可以在数字间任意连接-jvm编译时-会将下划线移除"><a href="#2-下划线可以在数字间任意连接-jvm编译时-会将下划线移除" class="headerlink" title="2.下划线可以在数字间任意连接,jvm编译时,会将下划线移除."></a>2.下划线可以在数字间任意连接,jvm编译时,会将下划线移除.</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/mysql使用存储过程一次插入百万级以上数据/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -438,6 +562,244 @@ END</code></pre><h5 id="3-调用执行插入操作"><a href="#3-调用执行插�
           
             <p>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>……<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more<br>2019-08-12 06:35:05.828 com.baijiahulian.bi.dao.NewOrderDao:130 [ERROR] - batchUpsertCustomer {}<br>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>…..<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more</p>
 <pre><code>解决: 本程序执行的时间较长,过程中其他任务也户籍执行,因为之前程序正常执行,而到出错之间只是跑的任务增加了,因此,确认代码没有问题后,增加连接池的大小,经过测试解决了问题.</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/02-装饰模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zuoshoudiyu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左手地狱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/08/02-装饰模式/" itemprop="url">02-装饰模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-08T00:00:00+08:00">
+                2019-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/07/01-简单工厂/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zuoshoudiyu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左手地狱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/07/01-简单工厂/" itemprop="url">01-简单工厂</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-07T00:00:00+08:00">
+                2019-08-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
           
         
       
@@ -1310,367 +1672,6 @@ git push  origin master     --push到github仓库</code></pre>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/elasticsearch安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshoudiyu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左手地狱">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/01/elasticsearch安装/" itemprop="url">mac下elasticsearch安装(elk)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-01T00:00:00+08:00">
-                2019-08-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-mac安装elasticsearch"><a href="#1-mac安装elasticsearch" class="headerlink" title="1.mac安装elasticsearch"></a>1.mac安装elasticsearch</h3><pre><code>brew install elasticsearch
-brew install kibana
-brew install logstash</code></pre><h3 id="2-访问"><a href="#2-访问" class="headerlink" title="2.访问"></a>2.访问</h3><pre><code>elasticsearch:http://localhost:9200
-Kibana:http://localhost:5601</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/25-35岁,你应该做什么/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshoudiyu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左手地狱">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/31/25-35岁,你应该做什么/" itemprop="url">25-35岁,你应该做什么</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-31T00:00:00+08:00">
-                2019-07-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="从今天起-每天一篇blog"><a href="#从今天起-每天一篇blog" class="headerlink" title="从今天起,每天一篇blog"></a>从今天起,每天一篇blog</h4>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/Hexo 博客发布新文章/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshoudiyu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左手地狱">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/31/Hexo 博客发布新文章/" itemprop="url">Hexo 博客发布新文章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-31T00:00:00+08:00">
-                2019-07-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-创建-md文件并写入内容-保存到-posts-目录下"><a href="#1-创建-md文件并写入内容-保存到-posts-目录下" class="headerlink" title="1.创建.md文件并写入内容,保存到_posts/目录下"></a>1.创建.md文件并写入内容,保存到_posts/目录下</h3><h3 id="2-进入hexo博客目录-与-config-yml同级目录"><a href="#2-进入hexo博客目录-与-config-yml同级目录" class="headerlink" title="2.进入hexo博客目录(与_config.yml同级目录)"></a>2.进入hexo博客目录(与_config.yml同级目录)</h3><h3 id="3-执行"><a href="#3-执行" class="headerlink" title="3.执行"></a>3.执行</h3><pre><code>hexo g  
-hexo d </code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1721,7 +1722,7 @@ hexo d </code></pre>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
