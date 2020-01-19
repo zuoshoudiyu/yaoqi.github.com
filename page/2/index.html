@@ -229,6 +229,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/22/装饰器模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zuoshoudiyu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左手地狱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/22/装饰器模式/" itemprop="url">装饰器模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-22T00:00:00+08:00">
+                2019-08-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/21/模版方法模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1310,126 +1429,6 @@ END</code></pre><h5 id="3-调用执行插入操作"><a href="#3-调用执行插�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/impala查询报错/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshoudiyu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左手地狱">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/12/impala查询报错/" itemprop="url">impala长连接查询报错</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-12T10:28:10+08:00">
-                2019-08-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>……<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more<br>2019-08-12 06:35:05.828 com.baijiahulian.bi.dao.NewOrderDao:130 [ERROR] - batchUpsertCustomer {}<br>java.sql.SQLException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatementInternal(Unknown Source)<br>at com.cloudera.impala.hivecommon.api.HS2Client.executeStatement(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.executeHelper(Unknown Source)<br>at com.cloudera.impala.hivecommon.dataengine.HiveJDBCNativeQueryExecutor.execute(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.executeWithParams(Unknown Source)<br>at com.cloudera.impala.jdbc.common.SPreparedStatement.execute(Unknown Source)<br>at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)<br>…..<br>Caused by: com.cloudera.impala.support.exceptions.ErrorException: [Cloudera]<a href="500593">ImpalaJDBCDriver</a> Communication link failure. Failed to connect to server. Reason: java.net.SocketException: Broken pipe.<br>… 12 more<br>Caused by: com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TTransportException: java.net.SocketException: Broken pipe<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:147)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.protocol.TBinaryProtocol.writeString(TBinaryProtocol.java:187)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:672)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq$TExecuteStatementReqStandardScheme.write(TExecuteStatementReq.java:595)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TExecuteStatementReq.write(TExecuteStatementReq.java:512)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4117)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args$ExecuteStatement_argsStandardScheme.write(TCLIService.java:4081)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$ExecuteStatement_args.write(TCLIService.java:4032)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.TServiceClient.sendBase(TServiceClient.java:63)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.send_ExecuteStatement(TCLIService.java:219)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.send_ExecuteStatement(Unknown Source)<br>at com.cloudera.impala.jdbc4.internal.apache.hive.service.cli.thrift.TCLIService$Client.ExecuteStatement(TCLIService.java:211)<br>at com.cloudera.impala.hivecommon.api.HS2ClientWrapper.ExecuteStatement(Unknown Source)<br>… 12 more<br>Caused by: java.net.SocketException: Broken pipe<br>at java.net.SocketOutputStream.socketWrite0(Native Method)<br>at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)<br>at java.net.SocketOutputStream.write(SocketOutputStream.java:153)<br>at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)<br>at java.io.BufferedOutputStream.write(BufferedOutputStream.java:121)<br>at com.cloudera.impala.jdbc4.internal.apache.thrift.transport.TIOStreamTransport.write(TIOStreamTransport.java:145)<br>… 24 more</p>
-<pre><code>解决: 本程序执行的时间较长,过程中其他任务也户籍执行,因为之前程序正常执行,而到出错之间只是跑的任务增加了,因此,确认代码没有问题后,增加连接池的大小,经过测试解决了问题.</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1480,7 +1479,7 @@ END</code></pre><h5 id="3-调用执行插入操作"><a href="#3-调用执行插�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1521,7 +1520,7 @@ END</code></pre><h5 id="3-调用执行插入操作"><a href="#3-调用执行插�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
