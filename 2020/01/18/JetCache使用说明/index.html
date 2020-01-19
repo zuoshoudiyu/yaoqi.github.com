@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="从今天起,每天坚持学习">
+<meta name="description" content="JetCache是一个基于Java的缓存系统封装，提供统一的API和注解来简化缓存的使用。 JetCache提供了比SpringCache更加强大的注解，可以原生的支持TTL、两级缓存、分布式自动刷新，还提供了Cache接口用于手工缓存操作。 当前有四个实现，RedisCache、TairCache（此部分未在github开源）、CaffeineCache(in memory)和一个简易的Link">
 <meta name="keywords" content="不要浮躁,不要丧失学习能力,不要丧失思考能力">
 <meta property="og:type" content="article">
-<meta property="og:title" content="25-35岁,你应该做什么">
-<meta property="og:url" content="http://yoursite.com/2019/07/31/25-35岁,你应该做什么/index.html">
+<meta property="og:title" content="JetCache使用说明">
+<meta property="og:url" content="http://yoursite.com/2020/01/18/JetCache使用说明/index.html">
 <meta property="og:site_name" content="左手地狱">
-<meta property="og:description" content="从今天起,每天坚持学习">
+<meta property="og:description" content="JetCache是一个基于Java的缓存系统封装，提供统一的API和注解来简化缓存的使用。 JetCache提供了比SpringCache更加强大的注解，可以原生的支持TTL、两级缓存、分布式自动刷新，还提供了Cache接口用于手工缓存操作。 当前有四个实现，RedisCache、TairCache（此部分未在github开源）、CaffeineCache(in memory)和一个简易的Link">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-19T09:20:06.585Z">
+<meta property="og:updated_time" content="2020-01-19T06:14:07.454Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="25-35岁,你应该做什么">
-<meta name="twitter:description" content="从今天起,每天坚持学习">
+<meta name="twitter:title" content="JetCache使用说明">
+<meta name="twitter:description" content="JetCache是一个基于Java的缓存系统封装，提供统一的API和注解来简化缓存的使用。 JetCache提供了比SpringCache更加强大的注解，可以原生的支持TTL、两级缓存、分布式自动刷新，还提供了Cache接口用于手工缓存操作。 当前有四个实现，RedisCache、TairCache（此部分未在github开源）、CaffeineCache(in memory)和一个简易的Link">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/31/25-35岁,你应该做什么/">
+  <link rel="canonical" href="http://yoursite.com/2020/01/18/JetCache使用说明/">
 
 
 
 
 
-  <title>25-35岁,你应该做什么 | 左手地狱</title>
+  <title>JetCache使用说明 | 左手地狱</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/25-35岁,你应该做什么/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/JetCache使用说明/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zuoshoudiyu">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">25-35岁,你应该做什么</h1>
+          <h1 class="post-title" itemprop="name headline">JetCache使用说明</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-31T00:00:00+08:00">
-                2019-07-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-18T00:00:00+08:00">
+                2020-01-18
               </time>
             
 
@@ -300,7 +300,10 @@
       
 
       
-        <h4 id="从今天起-每天坚持学习"><a href="#从今天起-每天坚持学习" class="headerlink" title="从今天起,每天坚持学习"></a>从今天起,每天坚持学习</h4>
+        <p>JetCache是一个基于Java的缓存系统封装，提供统一的API和注解来简化缓存的使用。 JetCache提供了比SpringCache更加强大的注解，可以原生的支持TTL、两级缓存、分布式自动刷新，还提供了Cache接口用于手工缓存操作。 当前有四个实现，RedisCache、TairCache（此部分未在github开源）、CaffeineCache(in memory)和一个简易的LinkedHashMapCache(in memory)，要添加新的实现也是非常简单的。</p>
+<p>全部特性:</p>
+<p>通过统一的API访问Cache系统<br>通过注解实现声明式的方法缓存，支持TTL和两级缓存<br>通过注解创建并配置Cache实例<br>针对所有Cache实例和方法缓存的自动统计<br>Key的生成策略和Value的序列化策略是可以配置的<br>分布式缓存自动刷新，分布式锁 (2.2+)<br>异步Cache API (2.2+，使用Redis的lettuce客户端时)<br>Spring Boot支持</p>
+
       
     </div>
     
@@ -324,8 +327,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/16/Hexo-搭建博客/" rel="next" title="Hexo 搭建博客">
-                <i class="fa fa-chevron-left"></i> Hexo 搭建博客
+              <a href="/2019/11/19/springboot+logback/" rel="next" title="springboot+logback">
+                <i class="fa fa-chevron-left"></i> springboot+logback
               </a>
             
           </div>
@@ -334,8 +337,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/31/Hexo 博客发布新文章/" rel="prev" title="Hexo 博客发布新文章">
-                Hexo 博客发布新文章 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/19/idea 2019.3.1 激活/" rel="prev" title="idea 2019.3.1 激活，亲测有效！">
+                idea 2019.3.1 激活，亲测有效！ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -388,17 +391,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -440,22 +434,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#从今天起-每天坚持学习"><span class="nav-number">1.</span> <span class="nav-text">从今天起,每天坚持学习</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
